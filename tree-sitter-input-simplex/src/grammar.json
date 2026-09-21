@@ -1,0 +1,345 @@
+{
+  "$schema": "https://tree-sitter.github.io/tree-sitter/assets/schemas/grammar.schema.json",
+  "name": "input_simplex",
+  "word": "identifier",
+  "rules": {
+    "source_file": {
+      "type": "SYMBOL",
+      "name": "formula"
+    },
+    "formula": {
+      "type": "PREC_LEFT",
+      "value": 0,
+      "content": {
+        "type": "SEQ",
+        "members": [
+          {
+            "type": "SYMBOL",
+            "name": "atom"
+          },
+          {
+            "type": "REPEAT",
+            "content": {
+              "type": "SEQ",
+              "members": [
+                {
+                  "type": "STRING",
+                  "value": "and"
+                },
+                {
+                  "type": "SYMBOL",
+                  "name": "atom"
+                }
+              ]
+            }
+          },
+          {
+            "type": "CHOICE",
+            "members": [
+              {
+                "type": "SEQ",
+                "members": [
+                  {
+                    "type": "STRING",
+                    "value": "and"
+                  },
+                  {
+                    "type": "STRING",
+                    "value": "parameters"
+                  },
+                  {
+                    "type": "SYMBOL",
+                    "name": "colon"
+                  },
+                  {
+                    "type": "SYMBOL",
+                    "name": "identifier"
+                  },
+                  {
+                    "type": "SYMBOL",
+                    "name": "colon"
+                  },
+                  {
+                    "type": "SYMBOL",
+                    "name": "inter"
+                  },
+                  {
+                    "type": "REPEAT",
+                    "content": {
+                      "type": "SEQ",
+                      "members": [
+                        {
+                          "type": "SYMBOL",
+                          "name": "comma"
+                        },
+                        {
+                          "type": "SYMBOL",
+                          "name": "identifier"
+                        },
+                        {
+                          "type": "SYMBOL",
+                          "name": "colon"
+                        },
+                        {
+                          "type": "SYMBOL",
+                          "name": "inter"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "BLANK"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "atom": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "sum"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "op"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "sum"
+        }
+      ]
+    },
+    "sum": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SEQ",
+          "members": [
+            {
+              "type": "CHOICE",
+              "members": [
+                {
+                  "type": "STRING",
+                  "value": "-"
+                },
+                {
+                  "type": "BLANK"
+                }
+              ]
+            },
+            {
+              "type": "SYMBOL",
+              "name": "term"
+            }
+          ]
+        },
+        {
+          "type": "REPEAT",
+          "content": {
+            "type": "SEQ",
+            "members": [
+              {
+                "type": "CHOICE",
+                "members": [
+                  {
+                    "type": "STRING",
+                    "value": "+"
+                  },
+                  {
+                    "type": "STRING",
+                    "value": "-"
+                  }
+                ]
+              },
+              {
+                "type": "SYMBOL",
+                "name": "term"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "op": {
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "="
+        },
+        {
+          "type": "STRING",
+          "value": "<="
+        },
+        {
+          "type": "STRING",
+          "value": ">="
+        }
+      ]
+    },
+    "term": {
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "SEQ",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "constant"
+            },
+            {
+              "type": "CHOICE",
+              "members": [
+                {
+                  "type": "SEQ",
+                  "members": [
+                    {
+                      "type": "SYMBOL",
+                      "name": "identifier"
+                    },
+                    {
+                      "type": "REPEAT",
+                      "content": {
+                        "type": "SEQ",
+                        "members": [
+                          {
+                            "type": "SYMBOL",
+                            "name": "mult"
+                          },
+                          {
+                            "type": "SYMBOL",
+                            "name": "identifier"
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "BLANK"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "SEQ",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "identifier"
+            },
+            {
+              "type": "REPEAT",
+              "content": {
+                "type": "SEQ",
+                "members": [
+                  {
+                    "type": "SYMBOL",
+                    "name": "mult"
+                  },
+                  {
+                    "type": "SYMBOL",
+                    "name": "identifier"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "constant": {
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "float"
+        }
+      ]
+    },
+    "identifier": {
+      "type": "PATTERN",
+      "value": "[a-z][a-z0-9]*"
+    },
+    "fraction": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "inter"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "div"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "inter"
+        }
+      ]
+    },
+    "float": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "inter"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "point"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "inter"
+        }
+      ]
+    },
+    "inter": {
+      "type": "PATTERN",
+      "value": "[0-9]+"
+    },
+    "point": {
+      "type": "STRING",
+      "value": "."
+    },
+    "minus": {
+      "type": "STRING",
+      "value": "-"
+    },
+    "div": {
+      "type": "STRING",
+      "value": "/"
+    },
+    "colon": {
+      "type": "STRING",
+      "value": ":"
+    },
+    "comma": {
+      "type": "STRING",
+      "value": ","
+    },
+    "mult": {
+      "type": "STRING",
+      "value": "*"
+    }
+  },
+  "extras": [
+    {
+      "type": "PATTERN",
+      "value": "\\s"
+    }
+  ],
+  "conflicts": [],
+  "precedences": [],
+  "externals": [],
+  "inline": [],
+  "supertypes": [],
+  "reserved": {}
+}

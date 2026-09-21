@@ -1,0 +1,39 @@
+x1 + x2 - x3 = 1.0 and 2.0x1 + 2.0x2 + x3 = 0.0 and x1 + x2 + 2.0x3 = -1.0
+-2.0x1 + x2 + x3 = 1.0 and x1 - 2.0x2 + x3 = -2.0 and x1 + x2 - 2.0x3 = 4.0
+2.0x1 - x2 - x3 - 4.0x4 = 9.0 and 4.0x1 - 3.0x3 - x4 = 0.0 and 8.0x1 - 2.0x2 - 5.0x3 - 9.0x4 = 18.0
+2.0x - 2.0y + z + 4.0w = 0.0 and x - y - 4.0z + 2.0w = 0.0 and -x + y + 3.0z - 2.0w = 0.0 and 3.0x - 3.0y + z + 6.0w = 0.0
+x + y + a*z = 1.0 and x + 2.0y + b*z = 3.0 and y + c*z = 2.0 and parameters: a: 2, b: 3, c: 2
+2.0x + y - z = 1.0 and x + 2.0y - 2.0z = 0.0 and 3.0x - y + 2.0z = -1.0 and x - y + z = k and parameters: k: 3
+x + y + z = a and x - a*y - z = 1.0 and 2.0x + y + a*z = a + 1.0 and parameters: a: 2
+x + y + h*z = 2.0h - 1.0 and x + h*y + z = h and h*x + y + z = 1.0 and parameters: h: 2
+2.0x + a*z = 1.0 and 3.0x + a*y - 2.0z = 2.0 and a*x + 2.0z = 1.0 and parameters: a: 2
+x + y - z = 1.0 and 2.0x + 3.0y + k*z = 3.0 and x + k*y + 3.0z = h and parameters: k: 2, h: 3
+k*x + y + z = 1.0 and x + k*y + z = 1.0 and x + y + k*z = h and parameters: k: 2, h: 3
+x - y + z = 5.0 and 2.0x + y + 2.0z = b and -3.0x - 3.0y + a*z = 1.0 and parameters: a: 2, b: 3
+2.0x - 3.0y + 2.0z = 1.0 and x + y - 2.0z = 2.0 and 4.0x - y + a*z = b and parameters: a: 2, b: 3
+3.0x - k*x - y - z = a and 2.0x - 4.0y + k*y - 2.0z = b and 3.0x - 3.0y - 5.0z + k*z = c and parameters: k: 2, a: 3, b: 2, c: 3
+2.0x - k*x - k*y + z - k*z = 1.0 - 2.0k and 4.0x - 2.0k*x - 3.0k*y + z - 2.0k*z = 1.0 - k and 2.0x - k*x - 2.0k*y + k*z = -5.0k and parameters: k: 2
+x + h*x - h*y + z + 2.0h*z = 3.0 + 2.0h and x + h*x - h*y + 2.0h*z = 1.0 + 3.0h and -x - h*x - z - 2.0h*z = -3.0 - 3.0h and parameters: h: 2
+x + k*x + y + k*y + 2.0z = 1.0 and x + k*y + z = 1.0 and x - k*x - z + k*z = 0.0 and parameters: k: 2
+k*x - 2.0y - 2.0k*y + z = 4.0 - 2.0k and y + k*y + z = 3.0 + k and 2.0k*x - 5.0y - 5.0k*y + 2.0z = 8.0 - 9.0k and parameters: k: 2
+k*x + 2.0y + 2.0k*z = 1.0 and k*x + 3.0y - k*y + 3.0k*z = 1.0 and k*x + y + k*y + 2.0k*z = 2.0 and parameters: k: 2
+x1 + x2 + x3 = a and a*x1 + x2 + 2.0x3 = 2.0 and x1 + a*x2 + x3 = 4.0 and parameters: a: 2
+2.0x - y + 3.0z + w = 0.0 and 4.0x + y - 2.0z - w = 0.0 and 2.0x + 5.0y + a*z - 5.0w = 0.0 and parameters: a: 2
+x1 + 2.0x2 - x3 + h*x4 = 0.0 and -x1 - 2.0x2 + h*x2 + x3 = 0.0 and 2.0x2 + x3 = 0.0 and -x1 - 2.0x2 + x3 + h*x4 = 0.0 and parameters: h: 2
+x + y - z = 0.0 and x + y + 2.0h*y - z - h*z = 1.0 + 2.0h and x + h*y - z = -1.0 + h and parameters: h: 2
+x - y - z = 0.0 and 3.0x + y + 2.0z = 0.0 and 4.0x + h*y = 0.0 and parameters: h: 2
+3.0x + 2.0y + z = 1.0 and 5.0x + 3.0y + 3.0z = 2.0 and 7.0x + 4.0y + 5.0z = 3.0 and x + y - z = 0.0
+x + y + h*z = 2.0h and x + y + 2.0z = -1.0 and 2.0x - h*y + 4.0z = -2.0 and parameters: h: 2
+h*x + y + h*z = -1.0 and 2.0x - y + 2.0z = -1.0 - h and 3.0x + 3.0y + 2.0z + h*z = -2.0 - h and parameters: h: 2
+x - a*y + z = a and a*x - 2.0y + 3.0z = -1.0 and 3.0x - 2.0y + a*z = 5.0a and parameters: a: 2
+2.0x + a*y = 1.0 and x + y - z = -2.0 and a*x - y + z = 2.0 and parameters: a: 2
+-h*x + y + z = 2.0 and x - y = -1.0 and h*x - 2.0y - 2.0z = k and parameters: h: 2, k: 3
+x1 + 2.0x2 + x3 = 1.0 and x1 + 2.0x2 - h*x2 + 2.0x3 + h*x3 = 2.0 and x1 + 2.0x2 + 3.0h*x2 - 2.0h*x3 = k and parameters: h: 2, k: 3
+2.0x1 - x2 - x3 = 0.0 and 2.0x1 - h*x1 + 2.0x2 + h*x2 - x3 = 1.0 and 2.0x1 + 3.0h*x1 - 2.0h*x2 - x3 = k and parameters: h: 2, k: 3
+x1 + 2.0x2 - x3 = 0.0 and 2.0x1 + 3.0x2 + k*x2 - 3.0x3 = 0.0 and -x1 + k*x1 + 4.0x2 - 3.0x3 = h and parameters: k: 2, h: 3
+-x + a*x + y - z = 1.0 and x + a*y + z = 1.0 + a and x + y + z = 2.0a and parameters: a: 2
+h*x1 + x2 - h*x2 - 2.0h*x3 = 2.0 and x1 + h*x2 + h*x3 = 0.0 and 2.0x1 + h*x2 + h*x3 = h and parameters: h: 2
+x1 - x2 + 2.0x3 = -k and 2.0x1 - k*x2 - x3 = 1.0 and k*x1 - 2.0x2 - x3 = -4.0 and parameters: k: 2
+x + k*y + z = 0.0 and k*x - y + 2.0z = 1.0 and x - y + 2.0z = k and parameters: k: 2
+h*x - y = 1.0 and x - h*y + z = 2.0 and 2.0x - h*y + 2.0z = -k and parameters: h: 2, k: 3
+x + y - z = -1.0 and 2.0x + 3.0y - 2.0a*z = -3.0 and x + a*y - 3.0z = a and parameters: a: 2

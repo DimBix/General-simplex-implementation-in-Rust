@@ -1,0 +1,41 @@
+{
+  "$schema": "https://tree-sitter.github.io/tree-sitter/assets/schemas/config.schema.json",
+  "grammars": [
+    {
+      "name": "input_simplex",
+      "camelcase": "InputSimplex",
+      "title": "InputSimplex",
+      "scope": "source.input_simplex",
+      "file-types": [
+        "input_simplex"
+      ],
+      "injection-regex": "^input_simplex$",
+      "class-name": "TreeSitterInputSimplex"
+    }
+  ],
+  "metadata": {
+    "version": "0.1.0",
+    "license": "MIT",
+    "description": "InputSimplex grammar for tree-sitter",
+    "authors": [
+      {
+        "name": "dimitri",
+        "url": ""
+      }
+    ],
+    "links": {
+      "repository": "https://github.com/tree-sitter/tree-sitter-input_simplex",
+      "funding": ""
+    }
+  },
+  "bindings": {
+    "c": true,
+    "go": false,
+    "java": false,
+    "node": true,
+    "python": false,
+    "rust": true,
+    "swift": false,
+    "zig": false
+  }
+}

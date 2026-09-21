@@ -1,0 +1,10 @@
+[package]
+name = "simplex_algorithm_implementation"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+rand = "0.8.0"
+tree-sitter = "0.26.8"
+tree-sitter-input-simplex = { path = "tree-sitter-input-simplex" }
+
